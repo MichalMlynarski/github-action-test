@@ -4,6 +4,7 @@ on:
   push:
   pull_request:
     types: [closed, assigned, opend, reopend]
+    
 
 jobs:
   run-github-actions:
