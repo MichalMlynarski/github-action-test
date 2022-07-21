@@ -5,10 +5,12 @@ on: [push]
 jobs:
   run-shell-commend: 
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps: 
       - name: echo a string
         run: echo "Hello World"
       - name: multiline script
+        if: faliure()
         run: |
           node -v
           npm -v
